@@ -1,1 +1,297 @@
 
+* {
+    margin: 0;
+    padding: 0;
+
+}
+
+
+#logo {
+    margin: -18px 1px;
+}
+
+#logo img {
+    width: 70px;
+    height: 65px;
+    border-radius: 50%;
+    margin: 30px 30px;
+}
+
+#nav-bar {
+    position: relative;
+    display: flex;
+    align-items: center;
+    top: 0px;
+    left: 0px;
+
+}
+
+#nav-bar::before {
+    content: "";
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    width: 100%;
+    height: 100%;
+    background-color: black;
+    z-index: -1;
+    opacity: 0.7;
+}
+
+#nav-bar ul {
+    display: flex;
+    font-family: 'Orbitron', sans-serif;
+}
+
+#nav-bar ul li {
+    list-style: none;
+    font-size: 1.2rem;
+}
+
+#nav-bar ul li a {
+    /* display: block; */
+    padding: 5px 22px;
+    text-decoration: none;
+    color: white;
+    border-radius: 15px;
+}
+
+#nav-bar ul li a:hover {
+    background-color: white;
+    color: black;
+}
+
+/* contact section */
+
+.contact {
+    position: relative;
+
+    /* height: 100px; */
+}
+
+#contact-box {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding-bottom: 34px;
+    width: 100%;
+}
+
+#contact-box input,
+#contact-box textarea {
+    width: 100%;
+    padding: 0.5rem;
+    border-radius: 9px;
+    font-size: 1.1rem;
+}
+
+#contact-box form {
+    width: 40%;
+}
+
+#contact-box label {
+    font-size: 1.2rem;
+    font-family: 'Play', sans-serif;
+    display: block;
+}
+
+.contact::before {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 90%;
+    z-index: -1;
+    opacity: 0.6;
+    background: url("https://source.unsplash.com/1600x900/?mobile") no-repeat;
+}
+
+#home::before {
+    content: "";
+    position: absolute;
+
+    background: url("https://source.unsplash.com/1600x900/?food") no-repeat center;
+    height: 350px;
+    width: 100%;
+    z-index: -1;
+    opacity: 0.8;
+
+}
+
+#home {
+    height: 335px;
+    display: flex;
+    /* position: relative; */
+    flex-direction: column;
+    padding: 5px 180px;
+    justify-content: center;
+    align-items: center;
+}
+
+#home h1 {
+    color: white;
+    text-align: center;
+    font-family: 'Bebas Neue', cursive;
+}
+
+#home p {
+    color: white;
+    text-align: center;
+    font-size: 1.7rem;
+    font-family: 'Bebas Neue', cursive;
+}
+
+.h-primary {
+    font-size: 3rem;
+    padding: 10px;
+    font-family: 'Play', sans-serif;
+}
+
+.h-secondary {
+    font-size: 2.2rem;
+    padding: 10px;
+    font-family: 'Play', sans-serif;
+}
+
+.center {
+    text-align: center;
+}
+
+.btn {
+    padding: 6px 22px;
+    border: 2px solid;
+    background-color: mediumorchid;
+    color: white;
+    margin: 18px;
+    border-radius: 10px;
+    cursor: pointer;
+}
+
+#services {
+    margin: 34px;
+    display: flex;
+    justify-content: space-around;
+}
+
+#services .box {
+    border: 2px solid brown;
+    margin: 4px 6px;
+    padding: 34px;
+    border-radius: 28px;
+    background-color: #d1e3e4;
+}
+
+#services .box img {
+
+    height: 160px;
+
+    display: block;
+    border-radius: 15px;
+    margin: auto;
+}
+
+.client-section {
+    height: 844px;
+}
+
+.client-section::before {
+    content: "";
+    position: absolute;
+    background-image: url("https://source.unsplash.com/1600x900/?vegetables");
+    width: 100%;
+    height: 80%;
+    z-index: -1;
+    opacity: 0.7;
+}
+
+.clients {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.client-item {
+    padding: 40px;
+
+}
+
+.clients img {
+    height: 130px;
+}
+
+footer {
+
+    background-color: black;
+    font-size: 2.2rem;
+    padding: 9px 20px;
+    color: white;
+    font-family: 'Play', sans-serif;
+}
+
+/* media queries */
+
+@media screen and (max-width: 1170px) {
+
+    /* Navigation */
+    #nav-bar {
+        flex-direction: column;
+    }
+
+    #nav-bar ul li a {
+        font-size: 1rem;
+        padding: 0px 7px;
+        padding-bottom: 8px;
+    }
+
+    /* Home section */
+    #home {
+        height: 370px;
+        padding: 3px 28px;
+    }
+
+    #home::before {
+        height: 480px;
+    }
+
+    #home p {
+        font-size: 13px;
+    }
+
+    /* Services section  */
+    #services {
+        flex-direction: column;
+    }
+
+    #services .box {
+        padding: 14px;
+        margin: 2px 0px;
+        margin-bottom: 20px;
+    }
+
+    /* Clients section */
+    .clients {
+        flex-wrap: wrap;
+    }
+
+    .clients img {
+        width: 66px;
+        padding: 6px;
+        height: auto;
+    }
+
+    /* Contact us section */
+    #contact-box form {
+        width: 80%;
+    }
+
+    /* Footer */
+
+    /* Utility classes */
+    .h-primary {
+        font-size: 26px;
+    }
+
+    .btn {
+        font-size: 13px;
+        padding: 4px 8px;
+    }
+}
